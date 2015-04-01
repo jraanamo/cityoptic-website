@@ -2,81 +2,23 @@
 layout: default
 ---
 
-<table width="100%">
-  <tr>
-    <td width="33%"></td>
-    <td width="33%" class="logo-cell"><img src="images/logo.gif"></td>
-    <td width="33%"></td>
-  </tr>
-<!--  <tr><td colspan="3">&nbsp;</td></tr>-->
-  <tr>
-    <td width="33%"></td>
-    <td width="33%" class="logo-cell"><img src="images/page_header.jpg"></td>
-    <td width="33%"></td>
-  </tr>
-  <tr>
-    <td width="33%"></td>
-    <td width="33%">
-    <div class="address">
-    Uudenmaankatu 2, 00120 Helsinki, 09-646 656, Nylandsgatan 2, 00120 Hfors
-    </div>
-    </td>
-    <td width="33%"></td>
-  </tr>
+<div class="home">
+  <h1 class="page-heading">Posts</h1>
 
-  <tr>
-    <td width="33%"></td>
-    <td width="33%">
-<div class="front-page-container">
-<div class="center">
-<p><a href="https://www.google.fi/maps/place/City+Optic/@60.164954,24.942377,14z/data=!4m2!3m1!1s0x46920bc97ba14ee3:0x9eb2cc301b30b64f" target="_parent">SIJAINTI...</a></p>
-</br>
-<p>Etsitkö optikkoliikettä jossa saat hyvää palvelua ja
-    laadukkaita silmälaseja?<br>
-    - Voit onnitella itseäsi, löysit juuri sellaisen! </p>
-<p><a href="palvelut.html">JATKA t&Auml;st&Auml;...</a></p>
-</div></div>
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-     
-    <div class="front-page-container">
-    <div class="center">
-    <p>
-    Söker Du en optikerbutik där Du får vänlig betjäning
-    pä svenska och högklassiga glasögon?<br>
-    - Du kan gratulera Dig själv, Du har hittat rätt!
-    </p>
-    <p><a href="info.html">klicka h&Auml;r...</a></p>
-    </div>
-    </div>        
-    </td>
-    <td width="33%"></td>
-  </tr>
-  <tr>
-    <td width="33%"></td>
-    <td width="33%">&nbsp;</td>
-    <td width="33%"></td>
-  </tr>    
-  <tr>
-    <td width="33%"></td>
-    <td width="33%" class="footer-cell">&copy; CITYOPTIC 2015 -
-    myynti<img src="images/miumau.gif">cityoptic.fi
-    </td>
-    <td width="33%"></td>
-  </tr>    
-</table>
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
 
-<script src="js/jquery-latest.js"></script>
-<script src="prettyPhoto/js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
-<script type="text/javascript">
-$(function(){$("a[rel^='prettyPhoto']").prettyPhoto();});
-</script>
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-15186803-1");
-pageTracker._trackPageview();
-} catch(err) {}</script>
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>
+
 
