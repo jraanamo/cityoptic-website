@@ -1,0 +1,85 @@
+
+body, p, h1, h2, h3, table, td, th, ul, ol, textarea, input {
+  font-family: times, sans-serif, tahoma;
+  margin-top: 10px;
+  margin-left: 30px;
+}
+
+h1 {
+  font-size: 1.4em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 1.0em;
+  font-weight: bold;
+}
+
+h5 {
+ font-size: 80%;
+}
+
+a {
+  color: #808080;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.center {
+  text-align: center;
+}
+
+.front-page-container {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.address {
+  text-transform: uppercase;
+  color: #505050;
+  font-size: 0.6em;
+  letter-spacing: 0.2em;
+  text-align: center;
+}
+
+td.title {
+  font-size: 1.0em;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.content-page {
+  margin-top: 30px;
+  width: 650px;
+}
+
+td.logo-cell {
+  border-bottom: 2px solid #000000;
+}
+
+td.footer-cell {
+  border-top: 1px solid #808080;
+  text-transform: uppercase;
+  color: #505050;
+  font-size: 0.6em;
+  letter-spacing: 0.2em;
+  text-align: center;
+}
+
+.welcome-cell {
+  border: 1px solid #808080;
+}
